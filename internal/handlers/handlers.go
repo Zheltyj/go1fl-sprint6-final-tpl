@@ -16,7 +16,7 @@ func IndexHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, fmt.Sprintf("Unsupported method %s", r.Method), http.StatusInternalServerError)
 		return
 	}
-	data, err := os.ReadFile("../index.html")
+	data, err := os.ReadFile("./index.html")
 	if err != nil {
 		http.Error(w, "Read error index.html", http.StatusInternalServerError)
 		return
